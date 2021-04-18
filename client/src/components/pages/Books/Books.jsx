@@ -38,9 +38,9 @@ const Books = () => {
 
   return <div>
     <h2>Books</h2>
-    <div>
-      {React.Children.toArray(booksItems.map((book, index) => {console.log(book); return <h4>{index + 1} {book.data}</h4>}))}
-    </div>
+    {/* <div>
+      {React.Children.toArray(booksItems.map((book, index) => {console.log(book.name); return <h4>{index + 1} {book.name}</h4>}))}
+    </div> */}
     <form>
       <label htmlFor="name">NAME</label>
       <input onChange={(event) => { setNameChange(event.target.value) }} type="text" name="name" /><br></br>
