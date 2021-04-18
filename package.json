@@ -6,7 +6,9 @@
     "setup": "npm install && cd client && npm install",
     "start": "node server/index.js",
     "server": "set PORT=4000 && nodemon Server/index.js",
-    "client": "cd client && npm run start"
+    "client": "cd client && npm run start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "Adiv_Shenkor",
   "license": "ISC",
@@ -21,3 +23,4 @@
   "devDependencies": {},
   "description": ""
 }
+
