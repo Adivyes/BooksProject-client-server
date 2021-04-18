@@ -17,9 +17,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 dbConnection.on('error', (err)=>{console.log(err)})
-app.get("/", (req, res) => {
-  res.status(200).json({message: "Get api is working fine"});
-});
+// app.get("/", (req, res) => {
+//   res.status(200).json({message: "Get api is working fine"});
+// });
 
 
 app.listen(PORT, () => {

@@ -1,6 +1,6 @@
 
 // const bookApi = "http://localhost:4000/";
-const bookApi = process.env.NODE_ENV === 'production'? 'herokuString': 'http://localhost:4000/'
+const bookApi = process.env.NODE_ENV === 'production'? 'https://bookappproject.herokuapp.com/': 'http://localhost:4000/'
 async function serverCall() {
     try {
         return await fetch(bookApi)
