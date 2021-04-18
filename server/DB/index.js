@@ -1,7 +1,11 @@
 const mongoose = require("mongoose");
-const dbConnection = "mongodb://127.0.0.1:27017/books"
+
+const dbConnection = process.env.DB
 mongoose
-.connect(dbConnection)
+.connect(dbConnection, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
   .catch((e) => {
     console.error("Connection error", e.message);
   });
